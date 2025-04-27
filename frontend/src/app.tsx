@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoginPage from '@/pages/login/page';
+import SamplePage from '@/pages/sample/page';
 import HomePage from '@/pages/home/page';
 import ProgressBar from '@/components/progressBar';
 
@@ -11,6 +12,7 @@ const App: React.FC = () => {
         <ProgressBar />
         <Routes>
           <Route path='/login' element={<LoginPage />} />
+          <Route path='/sample/*' element={<SamplePage />} />
           <Route path='/*' element={<HomePage />} />
         </Routes>
       </Router>
