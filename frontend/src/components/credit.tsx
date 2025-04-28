@@ -29,7 +29,7 @@ const Credit: React.FC = () => {
         <div className='w-[50%] flex flex-col justify-center'>
           <p className='h-[2rem]'>{credit?.acquired_credit || 0}</p>
           <p className='h-[2rem]'>{credit?.required_credit}</p>
-          <p className='h-[2rem]'>{credit?.current_gpa || 0}</p>
+          <p className='h-[2rem]'>{Number(credit?.current_gpa || 0).toFixed(2)}</p>
         </div>
       </div>
 
