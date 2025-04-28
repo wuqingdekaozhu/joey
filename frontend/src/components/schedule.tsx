@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-const colors = ['green', 'red', 'purple', 'amber', 'cyan', 'orange'];
+const colors = [
+  '#A8D5BA', // Pistachio Green
+  '#F7C1C0', // Rose Pink
+  '#C9BBE9', // Lavender Purple
+  '#FFF3B0', // Lemon Yellow
+  '#B5EAEA', // Sky Blue
+  '#FFD6A5', // Peach Orange
+  '#D0F4DE', // Mint Blue
+  '#FFCAD4', // Baby Pink
+  '#FFB5A7', // Light Coral
+  '#E0BBE4'  // Soft Lilac
+];
 
 interface ISlot {
   subject_code: string,
@@ -11,6 +22,7 @@ interface ISlot {
 interface ISlotTranslated {
   text: string,
   classname: string,
+  style: { backgroundColor: string },
 };
 
 interface TimetableProps {
@@ -37,7 +49,8 @@ const Timetable: React.FC<TimetableProps> = ({ slots: slots }) => {
         const location = JSON.parse(slot.location);
         const temp: ISlotTranslated = {
           text: `${slot.subject_code} @ ${location[t]}`,
-          classname: `${getPos(time[t] as number[])} bg-${getColor(Number(i))}-200 p-4 justify-center items-center flex`,
+          classname: `${getPos(time[t] as number[])} p-4 justify-center items-center flex`,
+          style: { backgroundColor: getColor(Number(i)) },
         };
         res.push(temp);
       }
@@ -46,7 +59,7 @@ const Timetable: React.FC<TimetableProps> = ({ slots: slots }) => {
   }, [slots]);
 
   return <>
-    {data.map((item, index) => <div key={index} className={item.classname}>
+    {data.map((item, index) => <div key={index} className={item.classname} style={item.style}>
       {item.text}
     </div>)}
   </>;
