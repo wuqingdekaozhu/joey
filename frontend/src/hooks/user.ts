@@ -26,7 +26,7 @@ export const login = async (id: string, password: string) => {
     Cookies.setCookie('user', token);
     return token;
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return null;
   }
 };
@@ -74,7 +74,7 @@ export const getUserProfile = async () => {
 
     return profile;
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return null;
   }
 };
@@ -102,7 +102,7 @@ export const getUserCredit = async () => {
 
     return data;
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return null;
   }
 };
@@ -134,7 +134,7 @@ export const getCreditBySubject = async () => {
       return [];
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return [];
   }
 };
@@ -168,7 +168,7 @@ export const getCreditToBeEarned = async () => {
       return null;
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return null;
   }
 };
@@ -200,7 +200,7 @@ export const getResults = async () => {
       return [];
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return [];
   }
 };
@@ -232,7 +232,7 @@ export const getTimetable = async () => {
       return [];
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return [];
   }
 };
@@ -264,7 +264,7 @@ export const getExam = async () => {
       return [];
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return [];
   }
 };
@@ -296,7 +296,7 @@ export const getSuggestedCourse = async () => {
       return [];
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return [];
   }
 };
@@ -332,7 +332,7 @@ export const searchCourses = async (query: string) => {
       return [];
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return [];
   }
 };
@@ -360,7 +360,7 @@ export const searchClass = async (id: number) => {
 
     return data;
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
     return null;
   }
 };
@@ -390,7 +390,7 @@ export const selectClass = async (class_id: number) => {
       alert('Class selection failed')
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
   }
 };
 
@@ -419,6 +419,6 @@ export const withdrawClass = async (class_id: number) => {
       alert('Class withdrawal failed');
     }
   } catch (err) {
-    alert(`Unexpected error : ${err}`);
+    console.log(`Unexpected error : ${err}`);
   }
 };

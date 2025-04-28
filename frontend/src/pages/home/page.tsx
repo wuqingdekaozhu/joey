@@ -16,6 +16,7 @@ import Title from '@/components/title';
 import Credit from '@/components/credit';
 import Sidebar from '@/components/sidebar';
 import Timetable from '@/components/timetable';
+import Footer from '@/components/footer';
 
 const DashboardPage: React.FC = () => {
   return <>
@@ -54,7 +55,7 @@ const HomePage: React.FC = () => {
           <Route path='class' element={<ClassPage />} />
           <Route path='withdrawal' element={<WithdrawalPage />} />
         </Routes>
-        <div className='divider'></div>
+        <Footer />
       </div>
     </div>
     <div className='w-[20%] h-screen p-[1rem] border-box'>

@@ -23,7 +23,7 @@ const LoginPage: React.FC = () => {
 
   return <>
     <form className='w-screen h-screen justify-center items-center flex z-0' onSubmit={handleSubmit(onSubmit)}>
-      <div className='bg-base-100 w-[30%] h-[100] shadow-lg rounded-[0.5rem] justify-center items-center flex flex-col p-[2rem] border-box'>
+      <div className='bg-base-100 w-[30%] shadow-lg rounded-[0.5rem] justify-center items-center flex flex-col p-[2rem] border-box'>
         <label className='input w-full mb-[1rem]'>
           <img src='/id.svg' />
           <input

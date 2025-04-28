@@ -33,7 +33,7 @@ const SideBar: React.FC = () => {
       </div>
     )}
 
-    <div className="divider"></div>
+    <hr />
 
     <p className='text-[1.2rem] font-semibold m-[1rem]'>Upcoming Events</p>
 

@@ -78,7 +78,7 @@ const Navigation: React.FC = () => {
         </Link>
       </div>
 
-      <div className='divider'></div>
+      <hr />
 
       <button className='btn btn-error w-full' onClick={handleLogout}>Logout</button>
     </div>
