@@ -57,6 +57,7 @@
 - For instance, the application does not implement password hashing, ip blocking, spam prevention features.
 - Environment are stored in config files rather than in .env files as it is more convenient in code sharing.
 - Code repository is in public for convenient code sharing as well.
+- Responsive layout is not taken into accounts (Phone display might not work well).
 
 ## Work been done
 - Requirements analysis.
