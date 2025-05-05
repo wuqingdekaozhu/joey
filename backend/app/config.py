@@ -5,5 +5,5 @@ class Config:
 
     MYSQL_HOST = 'localhost'
     MYSQL_USER = 'admin'
-    MYSQL_PASSWORD = 'admin'
+    MYSQL_PASSWORD = 'joeykowchinyee'
     MYSQL_DATABASE = 'my_database'
